@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            .header{
+                text-align: center;
+                border: 1px solid;
+                margin: 20px;
+                padding: 10px;
+                background-color: rgb(0, 255, 17);
+            }
+            .container{
+                background: #e3f9ff;
+                width: 100%;
+                height: 90vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid pink;
+
+            }
+            .calculator{
+               background: #370be3;
+               padding: 10px;
+               border-radius: 10px;
+            }
+            .numbers input{
+               /*  border: 0;
+                outline: 0; */
+                width: 90px;
+                height: 65px;
+                text-align: center;
+                padding: 20px 10px;
+                margin: 10px;
+                border-radius: 10%;
+                font-size: 15px;
+                cursor: pointer;
+                
+                
+            } 
+
+            .cal_screen input{
+                width: 100%;
+                height: 50px;
+                padding: 10px;
+                margin: 10px;
+                font-size: 20px;
+                font-weight: 100;
+                display: flex;
+                justify-content: flex-end;
+                text-align: right;
+                /* flex: 1; */
+                border-radius: 20px;
+            }
+            
+        </style>
+        <title>Calculator</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1> Calculate The Data Using  Calculator App</h1>
+        </div>
+        <div class="container">
+         <div class="calculator">
+           <form action="">
+                <div class="cal_screen">
+                    <input type="text" name="display"  class="calculator-screen">
+                </div>
+
+            <div class="numbers">
+                <input type="button" value="AC" onclick="display.value ='' ">
+                <input type="button" value="del" id="clear" onclick="display.value = display.value.toString().slice(0,-1)">
+                <input type="button" value="." onclick="display.value +='.'">
+                <input type="button" value="/" id="div" onclick="display.value+=('/')">
+            </div>
+            
+            <div class="numbers">
+                <input type="button" value="7" onclick="display.value+= '7' ">
+                <input type="button" value="8" onclick="display.value+= '8'">
+                <input type="button" value="9" onclick="display.value+=('9')">
+                <input type="button" value="*" id="mul" onclick="display.value+=('*')" >
+            </div>
+            <div class="numbers">
+                <input type="button" value="4" onclick="display.value+=('4')">
+                <input type="button" value="5" onclick="display.value+=('5')">
+                <input type="button" value="6" onclick="display.value+=('6')">
+                <input type="button" value="-" id="sub" onclick="display.value+=('-')">
+            </div>
+            <div class="numbers">
+                <input type="button" value="1" onclick="display.value+=('1')">
+                <input type="button" value="2" onclick="display.value+=('2')">
+                <input type="button" value="3" onclick="display.value+=('3')">
+                <input type="button" value="+" id="add" onclick="display.value+=('+')">
+            </div>
+            <div class="numbers">
+                <input type="button" value="00" onclick="display.value+=('00')" >
+                <input type="button" value="0" onclick="display.value+=('0')">
+                <input type="button" value="%" id="mod" onclick="display.value+=('%')">
+                <input type="button" value="=" id="equal_to" onclick="display.value = eval(display.value)">
+            </div>
+            
+            
+           </form> 
+        </div>
+
+    </div> 
+    <!-- <script>
+        let outputScreen = document.querySelector(".claculator-screen");
+
+function display(num){
+    outputScreen.value += num;  
+    
+}
+function calculate(){
+    try{
+        outputScreen.value = eval( outputScreen.value);
+    }
+    catch(err){
+        outputScreen.value = "Invalid Input"
+    }
+}
+
+function clearAll(){
+    outputScreen.value = "";
+}
+
+
+function del(){
+    outputScreen.value = outputScreen.value.slice(0,-1)
+}
+
+    </script> -->
+    </body>
+</html>
