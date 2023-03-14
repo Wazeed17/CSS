@@ -7,18 +7,28 @@
         <h1>Registration Form</h1>
         <form onsubmit="return validate()" id="forminput">
             <label for="">First Name</label>
-            <input type="text" id="firstname"  /> <br />
+            <input type="text" id="firstname" placeholder="First Name" /> <br />
             <span id="message1" style="color: red;"> </span> <br />
             <label for="">Last Name</label>
-            <input type="text" id="lastname"  /> <br />
+            <input type="text" id="lastname" placeholder="Last Name"  /> <br />
             <span id="message2" style="color: red;"> </span> <br />
             <label for="">Email</label>
-            <input type="email" id="userEmail" /> <br />
+            <input type="email" id="userEmail" placeholder="Email Id" /> <br />
             <span id="emailMessage" style="color:red"></span><br />
+             <label for="">Password</label>
+            <input type="password" id="userPassword" placeholder="password"  /> <br />
+            <span id="passwordMessage" style="color:red"></span><br />
+
+            <label for="">Re Enter Password</label>
+            <input type="password" id="userReEnterPassword"  placeholder="Re Enter Password"  /> <br />
+            <span id="matchPassword" class="pwd2" style="color:red"></span><br />
+            
+
+            
             <label for="">Mobile:</label>
-            <input type="number"  placeholder="Enter mobile no" id="mobile"><br>
+            <input type="number"  placeholder="Enter Mobile Number" id="mobile"><br>
             <span id="message3" style="color:red"></span><br />
-            <textarea name="" id="" cols="30" rows="5" placeholder="Address(area and street)" maxlength="48"></textarea><br/><br/>
+            <textarea name="" id="" cols="30" rows="5" minlength="20" maxlength="200" placeholder="Address(Area and Street)" ></textarea><br/><br/>
             Address type <br/><br/>
             <input type="radio" name="color">
             <label > Home</label>
